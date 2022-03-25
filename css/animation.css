@@ -1,0 +1,104 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700,300);
+
+.animate_item {  
+    position: relative;
+} 
+
+.animate_item_circle {
+    transition: all 0.5s;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.animate_item_header {
+    text-align: center; 
+    padding-top: 24px;
+}
+
+.animate_item_title, .animate_item_description {
+    opacity: 0;
+    color: #4a7479;
+    margin: 0;
+    transition: all 0.2s 0.04s;
+    position: relative;
+    top: -10px;
+}
+
+.animate_item_description {
+    transition: all 0.2s;
+    color: #b0d5d6;
+    font-size: 15px;
+}
+
+.animate_item_body {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #b0d5d6;
+    overflow: hidden; 
+    z-index: 1;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.animate_item_layer {
+    width: 100%;
+    height: 100%;
+    transition: 2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.animate_item_layer_forward {
+    right: 35%;
+    left: auto;
+}
+
+.animate_item_layer img {
+    position: absolute;
+    height: 100%; 
+}
+
+.animate_item_layer_forward img {
+    right: 0;
+}
+
+.animate_item_layer_backward img {
+    left: 0;
+}
+
+.animate_item_shadow { 
+    box-shadow: 0px 31px 19px -2px #e0e8f9;
+    height: 20px;
+    border-radius: 70%; 
+    transition: all 0.5s;
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    right: 0; 
+}
+
+.animate_item_body:hover {
+    transform: scale(1.1);
+}
+
+.animate_item_circle:hover .animate_item_layer_forward {
+    right: -100%;
+    transition: 4s;
+}
+
+.animate_item_circle:hover .animate_item_layer_backward {
+    left: -100%;
+    transition: 4s;
+}
+
+.animate_item_circle:hover .animate_item_header {
+    position: relative;
+}
+
+.animate_item_circle:hover .animate_item_title, .animate_item_circle:hover .animate_item_description {
+    opacity: 1;
+    top: -24px;
+}
